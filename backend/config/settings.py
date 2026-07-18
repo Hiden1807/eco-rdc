@@ -105,6 +105,17 @@ TEMPLATES = [
 WSGI_APPLICATION = "config.wsgi.application"
 ASGI_APPLICATION = "config.asgi.application"
 
+if os.getenv("DATABASE_URL"):
+    import dj_database_url
+    DATABASES = {
+        "default": dj_database_url.config(
+            default=os.getenv("DATABASE_URL"),
+            conn_max_age=600,
+            ssl_require=True,
+        )
+    }
+elif os.getenv("DB_ENGINE", "sqlite").lower() == "mysql":
+
 if os.getenv("DB_ENGINE", "sqlite").lower() == "mysql":
     import pymysql
 
