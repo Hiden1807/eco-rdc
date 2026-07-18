@@ -1,0 +1,15 @@
+.DS_Store
+Thumbs.db
+*.pyc
+__pycache__/
+.venv/
+venv/
+node_modules/
+dist/
+build/
+.env
+*.sqlite3
+media/
+frontend/.vite/
+frontend/dist/
+
