@@ -51,7 +51,8 @@ AI_HEALTH_CHECK_LIVE = env_bool("AI_HEALTH_CHECK_LIVE", False)
 AI_ALLOW_LOCAL_FALLBACK = env_bool("AI_ALLOW_LOCAL_FALLBACK", False)
 
 INSTALLED_APPS = [
-    "django.contrib.admin",
+    'jazzmin',
+    'django.contrib.admin',
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
